@@ -1,4 +1,4 @@
-ARCHIPEL_LANGUAGE_REGISTRY = {
+GROUP_MANAGEMENT_LANGUAGE_REGISTRY = {
     "jid": {
         "en-us": "Jabber ID",
         "fr-fr": "ID Jabber",

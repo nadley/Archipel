@@ -19,7 +19,7 @@
 
 @import <Foundation/Foundation.j>
 @import <AppKit/AppKit.j>
-
+@import "Resources/lang/localization.js"
 
 
 TNArchipelTypeVirtualMachineControl             = @"archipel:vm:control";
@@ -38,7 +38,6 @@ TNArchipelActionTypeDestroy                     = @"Destroy";
 TNArchipelActionTypeResume                      = @"Resume";
 TNArchipelActionTypeReboot                      = @"Reboot";
 
-[[TNLocalizationCenter defaultCenter] setLocale:localization forDomain:[self name]];
 
 /*! @defgroup  groupmanagement Module Group Management
     @desc This module allows to send controls to a list a virtual machine present in a Roster group
@@ -68,6 +67,7 @@ TNArchipelActionTypeReboot                      = @"Reboot";
 */
 - (void)awakeFromCib
 {
+    [[TNLocalizationCenter defaultCenter] setLocale:GROUP_MANAGEMENT_LANGUAGE_REGISTRY forDomain:[self name]];
     [viewTableContainer setBorderedWithHexColor:@"#C0C7D2"];
 
     _datasourceGroupVM      = [[TNTableViewDataSource alloc] init];
