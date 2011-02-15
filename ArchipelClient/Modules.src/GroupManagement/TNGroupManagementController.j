@@ -38,6 +38,8 @@ TNArchipelActionTypeDestroy                     = @"Destroy";
 TNArchipelActionTypeResume                      = @"Resume";
 TNArchipelActionTypeReboot                      = @"Reboot";
 
+[[TNLocalizationCenter defaultCenter] setLocale:localization forDomain:[self name]];
+
 /*! @defgroup  groupmanagement Module Group Management
     @desc This module allows to send controls to a list a virtual machine present in a Roster group
 */
@@ -92,10 +94,10 @@ TNArchipelActionTypeReboot                      = @"Reboot";
         imgView             = [[CPImageView alloc] initWithFrame:CGRectMake(0,0,16,16)];
 
     [vmColumNickname setWidth:250];
-    [[vmColumNickname headerView] setStringValue:@"Name"];
+    [[vmColumNickname headerView] setStringValue:[[TNLocalizationCenter defaultCenter] localize:@"name"]];
 
     [vmColumJID setWidth:450];
-    [[vmColumJID headerView] setStringValue:@"Jabber ID"];
+    [[vmColumJID headerView] setStringValue:[[TNLocalizationCenter defaultCenter] localize:@"jid"]];
 
     [imgView setImageScaling:CPScaleNone];
     [vmColumStatusIcon setDataView:imgView];
@@ -193,12 +195,12 @@ TNArchipelActionTypeReboot                      = @"Reboot";
 */
 - (void)menuReady
 {
-    [[_menu addItemWithTitle:@"Start selected virtual machines" action:@selector(create:) keyEquivalent:@""] setTarget:self];
-    [[_menu addItemWithTitle:@"Shutdown selected virtual machines" action:@selector(shutdown:) keyEquivalent:@""] setTarget:self];
-    [[_menu addItemWithTitle:@"Pause selected virtual machines" action:@selector(suspend:) keyEquivalent:@""] setTarget:self];
-    [[_menu addItemWithTitle:@"Resume selected virtual machines" action:@selector(resume:) keyEquivalent:@""] setTarget:self];
-    [[_menu addItemWithTitle:@"Reboot selected virtual machines" action:@selector(reboot:) keyEquivalent:@""] setTarget:self];
-    [[_menu addItemWithTitle:@"Destroy selected virtual machines" action:@selector(destroy:) keyEquivalent:@""] setTarget:self];
+    [[_menu addItemWithTitle:[[TNLocalizationCenter defaultCenter] localize:@"startvm"] action:@selector(create:) keyEquivalent:@""] setTarget:self];
+    [[_menu addItemWithTitle:[[TNLocalizationCenter defaultCenter] localize:@"shutdownvm"] action:@selector(shutdown:) keyEquivalent:@""] setTarget:self];
+    [[_menu addItemWithTitle:[[TNLocalizationCenter defaultCenter] localize:@"pausevm"] action:@selector(suspend:) keyEquivalent:@""] setTarget:self];
+    [[_menu addItemWithTitle:[[TNLocalizationCenter defaultCenter] localize:@"resumevm"] action:@selector(resume:) keyEquivalent:@""] setTarget:self];
+    [[_menu addItemWithTitle:[[TNLocalizationCenter defaultCenter] localize:@"rebootvm"] action:@selector(reboot:) keyEquivalent:@""] setTarget:self];
+    [[_menu addItemWithTitle:[[TNLocalizationCenter defaultCenter] localize:@"destroyvm"] action:@selector(destroy:) keyEquivalent:@""] setTarget:self];
 }
 
 
