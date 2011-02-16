@@ -1,33 +1,29 @@
 GROUP_MANAGEMENT_LANGUAGE_REGISTRY = {
-    "jid": {
-        "en-us": "Jabber ID",
-        "fr-fr": "ID Jabber",
-    },
     "name": {
         "en-us": "Name",
         "fr-fr": "Nom",
     },
-    "startvm": {
+    "start-vm": {
         "en-us": "Start selected virtual machines",
         "fr-fr": "Démarrer les machines virtuelles selectionnées",
     },
-    "shutdown": {
+    "shutdown-vm": {
         "en-us": "Shutdown selected virtual machines",
         "fr-fr": "Eteindre les machines virtuelles selectionnées",
     },
-    "pausevm": {
+    "pause-vm": {
         "en-us": "Pause selected virtual machines",
         "fr-fr": "Suspendre les machines virtuelles selectionnées",
     },
-    "resumevm": {
+    "resume-vm": {
         "en-us": "Resume selected virtual machines",
         "fr-fr": "Reprendre les machines virtuelles selectionnées",
     },
-    "rebootvm": {
+    "reboot-vm": {
         "en-us": "Reboot selected virtual machines",
         "fr-fr": "Redémarrer les machines virtuelles selectionnées",
     },
-    "destroyvm": {
+    "destroy-vm": {
         "en-us": "Destroy selected virtual machines",
         "fr-fr": "Détruire les machines virtuelles selectionnées",
     },

@@ -68,6 +68,7 @@ TNArchipelActionTypeReboot                      = @"Reboot";
 - (void)awakeFromCib
 {
     [[TNLocalizationCenter defaultCenter] setLocale:GROUP_MANAGEMENT_LANGUAGE_REGISTRY forDomain:[self name]];
+
     [viewTableContainer setBorderedWithHexColor:@"#C0C7D2"];
 
     _datasourceGroupVM      = [[TNTableViewDataSource alloc] init];
@@ -94,7 +95,7 @@ TNArchipelActionTypeReboot                      = @"Reboot";
         imgView             = [[CPImageView alloc] initWithFrame:CGRectMake(0,0,16,16)];
 
     [vmColumNickname setWidth:250];
-    [[vmColumNickname headerView] setStringValue:[[TNLocalizationCenter defaultCenter] localize:@"name"]];
+    [[vmColumNickname headerView] setStringValue:[[TNLocalizationCenter defaultCenter] localize:@"name" forDomain:[self name]];
 
     [vmColumJID setWidth:450];
     [[vmColumJID headerView] setStringValue:[[TNLocalizationCenter defaultCenter] localize:@"jid"]];
@@ -195,12 +196,12 @@ TNArchipelActionTypeReboot                      = @"Reboot";
 */
 - (void)menuReady
 {
-    [[_menu addItemWithTitle:[[TNLocalizationCenter defaultCenter] localize:@"startvm"] action:@selector(create:) keyEquivalent:@""] setTarget:self];
-    [[_menu addItemWithTitle:[[TNLocalizationCenter defaultCenter] localize:@"shutdownvm"] action:@selector(shutdown:) keyEquivalent:@""] setTarget:self];
-    [[_menu addItemWithTitle:[[TNLocalizationCenter defaultCenter] localize:@"pausevm"] action:@selector(suspend:) keyEquivalent:@""] setTarget:self];
-    [[_menu addItemWithTitle:[[TNLocalizationCenter defaultCenter] localize:@"resumevm"] action:@selector(resume:) keyEquivalent:@""] setTarget:self];
-    [[_menu addItemWithTitle:[[TNLocalizationCenter defaultCenter] localize:@"rebootvm"] action:@selector(reboot:) keyEquivalent:@""] setTarget:self];
-    [[_menu addItemWithTitle:[[TNLocalizationCenter defaultCenter] localize:@"destroyvm"] action:@selector(destroy:) keyEquivalent:@""] setTarget:self];
+    [[_menu addItemWithTitle:[[TNLocalizationCenter defaultCenter] localize:@"start-vm" forDomain:[self name]] action:@selector(create:) keyEquivalent:@""] setTarget:self];
+    [[_menu addItemWithTitle:[[TNLocalizationCenter defaultCenter] localize:@"shutdown-vm" forDomain:[self name]] action:@selector(shutdown:) keyEquivalent:@""] setTarget:self];
+    [[_menu addItemWithTitle:[[TNLocalizationCenter defaultCenter] localize:@"pause-vm" forDomain:[self name]] action:@selector(suspend:) keyEquivalent:@""] setTarget:self];
+    [[_menu addItemWithTitle:[[TNLocalizationCenter defaultCenter] localize:@"resume-vm" forDomain:[self name]] action:@selector(resume:) keyEquivalent:@""] setTarget:self];
+    [[_menu addItemWithTitle:[[TNLocalizationCenter defaultCenter] localize:@"reboot-vm" forDomain:[self name]] action:@selector(reboot:) keyEquivalent:@""] setTarget:self];
+    [[_menu addItemWithTitle:[[TNLocalizationCenter defaultCenter] localize:@"destroy-vm" forDomain:[self name]] action:@selector(destroy:) keyEquivalent:@""] setTarget:self];
 }
 
 
