@@ -71,4 +71,8 @@ ARCHIPEL_LANGUAGE_REGISTRY = {
         "en-us": "Remember",
         "fr-fr": "Se rappeler",
     },
+        "name": {
+        "en-us": "Name",
+        "fr-fr": "Nom",
+    },
 };
