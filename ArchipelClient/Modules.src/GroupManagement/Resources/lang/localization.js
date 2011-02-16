@@ -1,8 +1,4 @@
 GROUP_MANAGEMENT_LANGUAGE_REGISTRY = {
-    "name": {
-        "en-us": "Name",
-        "fr-fr": "Nom",
-    },
     "start-vm": {
         "en-us": "Start selected virtual machines",
         "fr-fr": "Démarrer les machines virtuelles selectionnées",

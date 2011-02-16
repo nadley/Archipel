@@ -95,7 +95,7 @@ TNArchipelActionTypeReboot                      = @"Reboot";
         imgView             = [[CPImageView alloc] initWithFrame:CGRectMake(0,0,16,16)];
 
     [vmColumNickname setWidth:250];
-    [[vmColumNickname headerView] setStringValue:[[TNLocalizationCenter defaultCenter] localize:@"name" forDomain:[self name]];
+    [[vmColumNickname headerView] setStringValue:[[TNLocalizationCenter defaultCenter] localize:@"name" forDomain:[self name]]];
 
     [vmColumJID setWidth:450];
     [[vmColumJID headerView] setStringValue:[[TNLocalizationCenter defaultCenter] localize:@"jid"]];
